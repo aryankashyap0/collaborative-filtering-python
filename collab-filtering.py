@@ -111,4 +111,4 @@ def user_recommendations(person):
     return recommendataions_list
         
 
-print user_recommendations('Alice')
+print user_recommendations('Bob')
