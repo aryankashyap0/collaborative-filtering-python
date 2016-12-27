@@ -25,7 +25,7 @@ dataset={
 
 
 
-			'Claudia Puig': {'Love At Last': 0, 
+			'Dave': {'Love At Last': 0, 
 							'Romance Forever': 0,
 							'Cute puppies of love': 0, 
 							'Nonstop car chases': 4,
