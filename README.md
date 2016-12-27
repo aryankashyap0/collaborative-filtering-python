@@ -1,7 +1,10 @@
 # collaborative-filtering-python
 
-# collaborative filtering
 This code is an implementation of Collabrative Filtering way of recommendation engine
+
+To run it simply do:
+
+``` python collab-filtering.py```
 
 You have got this dataset in the pic below and we apply collaborative filtering to recommend what to watch next
 
