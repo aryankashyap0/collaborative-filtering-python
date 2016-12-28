@@ -5,28 +5,28 @@ from math import sqrt
 
 def similarity_score(person1,person2):
 
-	# this Returns the ration euclidean distancen score of person 1 and 2
+    # this Returns the ration euclidean distancen score of person 1 and 2
 
-	# To get both rated items by person 1 and 2
-	both_viewed = {}
+    # To get both rated items by person 1 and 2
+    both_viewed = {}
 
-	for item in dataset[person1]:
-		if item in dataset[person2]:
-			both_viewed[item] = 1
-     	
-     	# The Conditions to check if they both have common rating items
-     	if len(both_viewed) == 0:
-     		return 0
+    for item in dataset[person1]:
+        if item in dataset[person2]:
+            both_viewed[item] = 1
+        
+        # The Conditions to check if they both have common rating items
+        if len(both_viewed) == 0:
+            return 0
 
-     	# Finding Euclidean distance
-     	sum_of_eclidean_distance = []
+        # Finding Euclidean distance
+        sum_of_eclidean_distance = []
 
-     	for item in dataset[person1]:
-     		if item in dataset[person2]:
-     			sum_of_eclidean_distance.append(pow(dataset[person1][item] - dataset[person2][item], 2))
-     	sum_of_eclidean_distance = sums(sum_of_eclidean_distance)
-     	
-     	return 1/(1+sqrt(sum_of_eclidean_distance))
+        for item in dataset[person1]:
+            if item in dataset[person2]:
+                sum_of_eclidean_distance.append(pow(dataset[person1][item] - dataset[person2][item], 2))
+        sum_of_eclidean_distance = sums(sum_of_eclidean_distance)
+        
+        return 1/(1+sqrt(sum_of_eclidean_distance))
 
 def person_correlation(person1, person2):
 
@@ -34,7 +34,7 @@ def person_correlation(person1, person2):
     both_rated = {}
     for item in dataset[person1]:
         if item in dataset[person2]:
-        	both_rated[item] = 1
+            both_rated[item] = 1
 
     number_of_ratings = len(both_rated)
 
@@ -111,4 +111,4 @@ def user_recommendations(person):
     return recommendataions_list
         
 
-print user_recommendations('Bob')
+print user_recommendations('Alice')
